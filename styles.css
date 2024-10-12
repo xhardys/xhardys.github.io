@@ -1,0 +1,137 @@
+/* Общие стили */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #ff0f47; /* Цвет фона */
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+h1 {
+    font-size: 5vw;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input-box input {
+    width: 100%;
+    padding: 15px 15px 15px 45px; /* Оставляем место для иконки */
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.remember {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remember label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.remember a {
+    color: white;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.glass-button {
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    margin-bottom: 15px;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition: background 0.3s;
+    box-sizing: border-box;
+}
+
+.glass-button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.register-link p {
+    font-size: 14px;
+}
+
+.register-link a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Медиазапросы для небольших экранов */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 7vw;
+    }
+
+    input, .glass-button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .remember label, .remember a {
+        font-size: 12px;
+    }
+}
+
+/* Медиазапросы для более крупных устройств */
+@media screen and (min-width: 900px) {
+    h1 {
+        font-size: 3vw;
+    }
+
+    input, .glass-button {
+        padding: 18px;
+        font-size: 20px;
+    }
+}
